@@ -1,0 +1,20 @@
+colorscheme ir_black
+
+" clean whitespace
+:nnoremap <silent> <leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+" Remap Ctl+W J K L H to just CTL+JKLH
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Control where windows split
+set splitbelow
+set splitright
+
+" Window resizing mappings
+" nnoremap <S-Up>  <C-W>+
+" nnoremap <S-Down> <C-W>-
+" nnoremap <S-Left> <c-w><
+" nnoremap <S-Right> <c-w>>

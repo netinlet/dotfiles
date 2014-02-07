@@ -1,0 +1,2 @@
+let mapleader = ","
+set wildignore+=*/vendor/bundle/*
