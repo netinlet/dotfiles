@@ -6,9 +6,6 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
-LC_CTYPE=en_US.UTF-8
-export LC_CTYPE
-
 # include .bashrc if it exists
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
@@ -18,10 +15,8 @@ fi
 # PATH
 #
 
-PATH=$PATH:/usr/local/sbin:~/bin
-#PATH=$PATH:/Users/doug/node_modules/.bin
-PATH=$PATH:/usr/local/share/npm/bin
-export PATH
+PATH=$PATH:~/bin
+#export PATH
 
 
 #
@@ -52,8 +47,9 @@ export CDPATH
 #
 # RBENV
 #
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+export PATH
 
-#export NODE_PATH="/usr/local/share/npm/lib/node_modules"
 
-export EDITOR=/usr/local/bin/mvim
+export EDITOR=/usr/local/bin/vim
