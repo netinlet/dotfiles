@@ -21,16 +21,19 @@ PATH=$PATH:~/bin
 
 #
 # Bash Completion
-
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if hash brew 2>/dev/null; then
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+  fi
 fi
 
 #
 # Java
 #
-JAVA_HOME=`/usr/libexec/java_home`
-export JAVA_HOME
+if [ -f /usr/libexec/java_home ]; then
+  JAVA_HOME=`/usr/libexec/java_home`
+  export JAVA_HOME
+fi
 
 #
 # Colorize the Terminal
