@@ -54,5 +54,14 @@ PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 export PATH
 
+#
+# EDITOR
+#
+vim1=/usr/local/bin/vim
+vim2=/usr/bin/vim
 
-export EDITOR=/usr/local/bin/vim
+if [ -f $vim1 ]; then
+  export EDITOR=$vim1
+else
+  export EDITOR=$vim2
+fi
