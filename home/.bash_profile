@@ -18,6 +18,8 @@ fi
 PATH=$PATH:~/bin
 #export PATH
 
+DEVROOT=~/devroot
+export DEVROOT
 
 #
 # Bash Completion
