@@ -1,0 +1,18 @@
+[user]
+	name = Doug Bryant
+	email = doug@netinlet.com
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	br = branch
+[push]
+  default = upstream
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main
